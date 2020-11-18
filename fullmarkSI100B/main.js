@@ -1,4 +1,4 @@
-var schemes = {}, scheme_list = ['python'];
+var schemes = {}, scheme_list = ['SI100B'];
 for (let i = 0; i < scheme_list.length; ++i) {
     $.getScript('schemes/' + scheme_list[i] + '.js', function () {
         $(document).ready(function () {

@@ -173,14 +173,20 @@
 <blockquote>
 <p>我！想！推！七！绪！</p>
 </blockquote>
-<p><code>git branch nanao</code><br><code>git checkout nanao</code></p>
-<p>（进行游戏</p>
+<p><code>git branch nanao</code><br><code>git checkout nanao</code><br>或者<code>git checkout -b nanao</code><br>（进行游戏</p>
 <p><code>git branch --set-upstream-to=origin/nanao nanao</code><br><em>因为开头在remote新建仓库的历史遗留问题</em><br><code>git push</code></p>
 <blockquote>
 <p>我！想！推！大！小！姐！</p>
 </blockquote>
-<p><code>git checkout master</code></p>
-<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>在GAL场景下应该不存在吧？？？</p>
+<p><code>git checkout master</code><br>（但这样还不够！</p>
+<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>在GAL场景下应该不存在吧？？？（你好，存在的</p>
+<blockquote>
+<p>当你打完所有线路准备进TE的时候……</p>
+</blockquote>
+<ul>
+<li>我想回到master分支打TE，怎么办？<br><code>git checkout master</code><br>现在的主分支应该是比nanao分支慢N个提交的<br>但我们需要的是把已读文本数据、游戏进度数据（要开TE）和（可能修改过的）系统设置合并过来</li>
+</ul>
+<p><strong>事实上，无论如何切换分支，已读文本数据、游戏进度数据和系统设置都应该被保持最新。</strong><br><code>git merge nanao</code><br>这时你一定会发现冲突了<br>记住，在任何时候你都可以<code>git merge --abort</code>弃坑报平安。</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><ul>
 <li>逐渐加深感情，终于到了H scene了……<br><code>git tag firstH</code><br>记录下这一珍贵的瞬间（x</li>
 </ul>
@@ -226,19 +232,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2020/11/18/201118-SP_hw3-Regrade%E8%AE%B0/">201118 SP_hw3 Regrade记</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/11/16/201116/">201116</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/11/14/201114/">201114</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2020/11/07/2020-11-07-SB100I-yyds-%E5%9E%83%E5%9C%BE%E5%85%A8%E9%9D%A2%E5%A4%A7%E7%88%86%E5%8F%91/">SB100I yyds 垃圾全面大爆发</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2020/11/04/201104/">201104</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2020/10/30/201030%E5%87%8C%E6%99%A8/">运用GAL云存档练习GIT的使用</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2020/10/28/201028/">201028早八前</a>
             </li>
             
         </ul>
