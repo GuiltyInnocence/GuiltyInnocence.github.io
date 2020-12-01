@@ -140,6 +140,90 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2020/11/30/201130/">
+                201130
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-11-30</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天整的活<br><img src="./images/201130.jpg"></p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/11/24/201124/">
+                关于Ctrl+Z,Ctrl+C, 以及EOF和0x1A的奇葩问题
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-11-24</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>还没懂，先坑着</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/11/24/201124spinachTQL/">
+                201124spinachTQL
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-11-24</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>运行程序<br>路径不包含当前目录<br>需要<code>./</code>，或绝对路径</p>
+<p>控制符<br>实为进程间通信<br>tty下是tty和目标进程间<br>DE下则是terminal(GUI)和DE，DE和目标程序间</p>
+<p>终端中交互程序实际为输入发送至程序的stdin，stdout输出指向终端<br>回想：cpp文件输入freopen即是把程序stdin/stdout重定向</p>
+<p>环境变量</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2020/11/22/2020-11-22-One-Room-S3-%E8%A7%82%E8%AF%84/">
                 One Room S3 观评
             </a>
@@ -240,140 +324,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/11/16/201116/">
-                201116
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-11-16</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h1 id="安装【花萎电脑管家】后桌面右键菜单问题"><a href="#安装【花萎电脑管家】后桌面右键菜单问题" class="headerlink" title="安装【花萎电脑管家】后桌面右键菜单问题"></a>安装【花萎电脑管家】后桌面右键菜单问题</h1><ul>
-<li>为了玩破解版多屏协同必须装这玩意</li>
-<li>桌面右键会多一个<code>显示管理</code>的东西（本来是给花萎笔记本用的）<h2 id="方法：简单粗暴——改注册表！"><a href="#方法：简单粗暴——改注册表！" class="headerlink" title="方法：简单粗暴——改注册表！"></a>方法：简单粗暴——改注册表！</h2></li>
-<li>搜索键值位置？</li>
-<li>直接搜<code>huawei</code>获得进程名称<code>MonitorManager</code></li>
-<li>接着再搜索这个，几下<key>F2</key>之后找到键值位于<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\DesktopBackground\Shell</code></li>
-</ul>
-<p><strong>直接删！</strong>完事~</p>
-<h1 id="淦Arch和Win双系统"><a href="#淦Arch和Win双系统" class="headerlink" title="淦Arch和Win双系统"></a>淦Arch和Win双系统</h1><ul>
-<li>奇怪的现象：win引导再怎么搞也能半分钟修好，有手就行</li>
-<li>昨天先装的Arch</li>
-<li>今天傻乎乎的把ext4分区直接缩小resize，没有走程序<br>——分区炸了，挂载都挂不上那种<br>干脆重装</li>
-<li>注意此时<code>EFI</code>分区保留了</li>
-<li>resize多出来的空间装了win10，<strong>用bios引导+win安装器直接往单目标分区写入</strong>装的（这个时候当然不能进系统啦）<br>然后<strong>用Dism++修复引导，往<code>EFI</code>里写uefi引导</strong><h2 id="结果就可以UEFI启动了？？？？？？？？？？"><a href="#结果就可以UEFI启动了？？？？？？？？？？" class="headerlink" title="结果就可以UEFI启动了？？？？？？？？？？"></a>结果就可以UEFI启动了？？？？？？？？？？</h2></li>
-</ul>
-<p><em>我TM直接懵逼</em></p>
-<ul>
-<li>无奈再手动装一遍Arch，这回配好grub，注意全程EFI分区没有格式化过</li>
-<li>然后启动，引导是进win的，但是<strong>蓝！屏！</strong>，显示启动设备不正确（？不记得了）</li>
-<li>于是故技重施，进PE<h2 id="发现最后的NTFS分区（磁盘0分区3）不见了？？？"><a href="#发现最后的NTFS分区（磁盘0分区3）不见了？？？" class="headerlink" title="发现最后的NTFS分区（磁盘0分区3）不见了？？？"></a>发现最后的NTFS分区（磁盘0分区3）不见了？？？</h2></li>
-</ul>
-<p><em>我TM直接懵逼</em></p>
-<ul>
-<li>于是大胆捣鼓，<strong>DiskGenius直接恢复丢失分区</strong>，重建NTFS分区<h2 id="于是Windows好了？？？"><a href="#于是Windows好了？？？" class="headerlink" title="于是Windows好了？？？"></a>于是Windows好了？？？</h2></li>
-</ul>
-<p><em>我TM直接懵逼</em></p>
-<ul>
-<li>然后按照<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jpfss/p/9462792.html">教程</a>在CMD/Powershell里<code>bcdedit /set &#123;bootmgr&#125; path \EFI\ArchLinux\grubx64.efi</code>就可以引导进grub了<blockquote>
-<p>看了一圈，原理应该是把windows boot manager的bootloader(?)指向grub，通过grub再导回windows</p>
-</blockquote>
-</li>
-<li>然！后！windows居然出现两个启动项？？？</li>
-<li>第一个正常进系统，第二个<strong>退回grub</strong>？？？<h2 id="搁这套娃呢？？？"><a href="#搁这套娃呢？？？" class="headerlink" title="搁这套娃呢？？？"></a>搁这套娃呢？？？</h2></li>
-</ul>
-<p><em>我TM直接懵逼</em></p>
-<h1 id="发现：bios安装的win10用dism-写个uefi就能uefi启动了"><a href="#发现：bios安装的win10用dism-写个uefi就能uefi启动了" class="headerlink" title="发现：bios安装的win10用dism++写个uefi就能uefi启动了"></a>发现：bios安装的win10用dism++写个uefi就能uefi启动了</h1><h1 id="结论：windows的引导怎么折腾都能救回来"><a href="#结论：windows的引导怎么折腾都能救回来" class="headerlink" title="结论：windows的引导怎么折腾都能救回来"></a>结论：windows的引导怎么折腾都能救回来</h1><p><span style="color:red">第二天追加 linux下装了一堆包之后win启动又炸了 这回ntfs分区没问题引导没问题 是奇奇怪怪的锅 万能dism++又修好了 我***</span></p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/11/14/201114/">
-                201114
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-11-14</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h1 id="勾搭spinach大佬帮忙装了Arch。"><a href="#勾搭spinach大佬帮忙装了Arch。" class="headerlink" title="勾搭spinach大佬帮忙装了Arch。"></a>勾搭spinach大佬帮忙装了Arch。</h1><p>太强了。<br>我只能爬<br>命令根本背不来</p>
-<h1 id="45收了显示器"><a href="#45收了显示器" class="headerlink" title="45收了显示器"></a>45收了显示器</h1><p>血赚<br>1440*900的dvi+vga方案<br>还帮忙送到楼下<br>真的好人</p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/11/07/2020-11-07-SB100I-yyds-%E5%9E%83%E5%9C%BE%E5%85%A8%E9%9D%A2%E5%A4%A7%E7%88%86%E5%8F%91/">
-                SB100I yyds 垃圾全面大爆发
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-11-07</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>EE部分来了，它来了<br>带着<strong>此前SP和PP都无法比拟的</strong></p>
-<h2 id="荒谬的！"><a href="#荒谬的！" class="headerlink" title="荒谬的！"></a>荒谬的！</h2><h2 id="不负责任的！"><a href="#不负责任的！" class="headerlink" title="不负责任的！"></a>不负责任的！</h2><h2 id="作业！"><a href="#作业！" class="headerlink" title="作业！"></a>作业！</h2><hr>
-<ol>
-<li><p>开幕雷击，第一问让你<strong>上网搜索</strong>某些内容</p>
-<blockquote>
-<p> In this problem, you are asked to search the Internet (google, bing, baidu, etc.), and find out the specific details of these two concepts. </p>
-</blockquote>
-<h2 id="那我上这课干嘛？？？"><a href="#那我上这课干嘛？？？" class="headerlink" title="那我上这课干嘛？？？"></a>那我上这课干嘛？？？</h2></li>
-<li><p>以文字叙述形式提交作业</p>
-<h2 id="你TM文科呢？写千字文呢？"><a href="#你TM文科呢？写千字文呢？" class="headerlink" title="你TM文科呢？写千字文呢？"></a>你TM文科呢？写千字文呢？</h2></li>
-<li><p>传统艺能——作业<strong>发布后</strong>一改再改<br><img src="/images/201107.png"></p>
-</li>
-<li><p>作业提交形式极其不合理</p>
-<h2 id="multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？"><a href="#multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？" class="headerlink" title="multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？"></a>multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？</h2></li>
-<li><p>Tutorial视频不传内网传piazza</p>
-<h2 id="TM逗我玩？你TM在搞笑么-真就看得起上科的出口带宽咯？"><a href="#TM逗我玩？你TM在搞笑么-真就看得起上科的出口带宽咯？" class="headerlink" title="TM逗我玩？你TM在搞笑么?真就看得起上科的出口带宽咯？"></a>TM逗我玩？你TM在搞笑么?真就看得起上科的出口带宽咯？</h2><p><img src="/images/201107_2.png"></p>
-</li>
-</ol>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -416,19 +366,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2020/11/30/201130/">201130</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/11/24/201124/">关于Ctrl+Z,Ctrl+C, 以及EOF和0x</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/11/24/201124spinachTQL/">201124spinachTQL</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2020/11/22/2020-11-22-One-Room-S3-%E8%A7%82%E8%AF%84/">One Room S3 观评</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2020/11/22/201121-OpenWRT%E6%8C%82%E8%BD%BDusb%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/">201121随记+OpenWRT挂载usb实现文件</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2020/11/18/201118-SP_hw3-Regrade%E8%AE%B0/">201118 SP_hw3 Regrade记</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2020/11/16/201116/">201116</a>
             </li>
             
         </ul>
