@@ -140,6 +140,105 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2020/11/24/201124spinachTQL/">
+                201124spinachTQL
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-11-24</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>运行程序<br>路径不包含当前目录<br>需要<code>./</code>，或绝对路径</p>
+<p>控制符<br>实为进程间通信<br>tty下是tty和目标进程间<br>DE下则是terminal(GUI)和DE，DE和目标程序间</p>
+<p>终端中交互程序实际为输入发送至程序的stdin，stdout输出指向终端<br>回想：cpp文件输入freopen即是把程序stdin/stdout重定向</p>
+<p>环境变量</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/11/22/2020-11-22-One-Room-S3-%E8%A7%82%E8%AF%84/">
+                One Room S3 观评
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-11-22</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h3 id="FMF的曲作越来越神仙了"><a href="#FMF的曲作越来越神仙了" class="headerlink" title="FMF的曲作越来越神仙了"></a>FMF的曲作越来越神仙了</h3><p>各种风格都出来了<br>小看奥井康介了啊<br>搞得现在看OneRoom不是为了角色而是冲着ED去的（x</p>
+<h1 id="我永远喜欢琴川晶"><a href="#我永远喜欢琴川晶" class="headerlink" title="我永远喜欢琴川晶"></a>我永远喜欢琴川晶</h1><p>学妹系赛高！</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/11/22/201121-OpenWRT%E6%8C%82%E8%BD%BDusb%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/">
+                201121随记+OpenWRT挂载usb实现文件共享
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-11-22</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="日常折腾，我又不会了"><a href="#日常折腾，我又不会了" class="headerlink" title="日常折腾，我又不会了"></a>日常折腾，我又不会了</h1><h3 id="更换无线密码（弱密码）为强密码"><a href="#更换无线密码（弱密码）为强密码" class="headerlink" title="更换无线密码（弱密码）为强密码"></a>更换无线密码（弱密码）为强密码</h3><p>密码非常的骚<br>我一边配一边笑抽<br>结果改密码遇上非常奇葩的事情（一切都是因为<strong>用了无线连接+图形管理界面的锅</strong><br>    - 改好密码，配置应用。自然，电脑是会断网的。忘记网络，输新密码，重连，看起来不错。<br>    - 但！是！这时候浏览器不安分了！网页前端脚本（应该是）在90s检测不到路由器在线后，执行回滚更改命令。恰巧这个时候我输入新的密码连上路由器了，于是……<br>    - 密码被回滚了<br>    - CNMSB<br>    - 后来直接关网页+清cookie解决</p>
+<h3 id="Linux使用iwd设置新的密码"><a href="#Linux使用iwd设置新的密码" class="headerlink" title="Linux使用iwd设置新的密码"></a>Linux使用iwd设置新的密码</h3><ul>
+<li>win底下傻瓜操作有手就行</li>
+<li>轮到Linux了。<br>自然是<code>iwctl</code><h4 id="注意！忘记网络known-networks-SSID-forget"><a href="#注意！忘记网络known-networks-SSID-forget" class="headerlink" title="注意！忘记网络known-networks SSID forget"></a>注意！忘记网络<code>known-networks SSID forget</code></h4></li>
+<li>然后正常<code>station device connect SSID</code><h3 id="spinach大佬又来帮忙（？）折腾了，装i3"><a href="#spinach大佬又来帮忙（？）折腾了，装i3" class="headerlink" title="spinach大佬又来帮忙（？）折腾了，装i3"></a>spinach大佬又来帮忙（？）折腾了，装i3</h3></li>
+</ul>
+<h1 id="OpenWRT挂载usb实现文件共享"><a href="#OpenWRT挂载usb实现文件共享" class="headerlink" title="OpenWRT挂载usb实现文件共享"></a>OpenWRT挂载usb实现文件共享</h1><blockquote>
+<p>前情提要：50从楼上大佬那收的Netgear R6220。128M内闪存+128M存储（极小），但四口全千兆，2.4/5双频，还有学长售后服务，还要什么自行车</p>
+</blockquote>
+<p>首先，之前已经配置好openssh啦~<br><strong>在ssh的时候一定要带用户名！！！</strong><code>ssh root@192.168.1.1</code><br>然后进入openwrt的后台。</p>
+<hr>
+<p>查资料<br><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/5225f26b6b273fe6fa090829.html">百毒敬烟</a>难得靠谱了一次，照着它淦~<br>收到的时候原物主已经把路由恢复默认了，看一下有什么包<br>噫好耶有一堆usb依赖已经装好了<br><code>lsblk</code>看一下，发现usb已经挂载了<br>那就好办了，直接进行以下操作</p>
+<h2 id="安装剩余依赖"><a href="#安装剩余依赖" class="headerlink" title="安装剩余依赖"></a>安装剩余依赖</h2><p><code>opkg install samba luci-app-samba kmod-fs-ntfs ntfs-3g block-mount</code></p>
+<h2 id="开机挂载"><a href="#开机挂载" class="headerlink" title="开机挂载"></a>开机挂载</h2><p>百毒的是写脚本<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_33726313/article/details/86317155">这博客</a>貌似更靠谱？<br><code>/etc/init.d/samba enable</code><br><code>/etc/init.d/samba start</code></p>
+<h2 id="配置共享"><a href="#配置共享" class="headerlink" title="配置共享"></a>配置共享</h2><p>因为装的是Openwrt-Luci，一切就是如此简单<br>GUI，轻轻松松~<br>777权限，色图随便传（</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2020/11/18/201118-SP_hw3-Regrade%E8%AE%B0/">
                 201118 SP_hw3 Regrade记
             </a>
@@ -261,135 +360,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/11/07/2020-11-07-SB100I-yyds-%E5%9E%83%E5%9C%BE%E5%85%A8%E9%9D%A2%E5%A4%A7%E7%88%86%E5%8F%91/">
-                SB100I yyds 垃圾全面大爆发
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-11-07</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>EE部分来了，它来了<br>带着<strong>此前SP和PP都无法比拟的</strong></p>
-<h2 id="荒谬的！"><a href="#荒谬的！" class="headerlink" title="荒谬的！"></a>荒谬的！</h2><h2 id="不负责任的！"><a href="#不负责任的！" class="headerlink" title="不负责任的！"></a>不负责任的！</h2><h2 id="作业！"><a href="#作业！" class="headerlink" title="作业！"></a>作业！</h2><hr>
-<ol>
-<li><p>开幕雷击，第一问让你<strong>上网搜索</strong>某些内容</p>
-<blockquote>
-<p> In this problem, you are asked to search the Internet (google, bing, baidu, etc.), and find out the specific details of these two concepts. </p>
-</blockquote>
-<h2 id="那我上这课干嘛？？？"><a href="#那我上这课干嘛？？？" class="headerlink" title="那我上这课干嘛？？？"></a>那我上这课干嘛？？？</h2></li>
-<li><p>以文字叙述形式提交作业</p>
-<h2 id="你TM文科呢？写千字文呢？"><a href="#你TM文科呢？写千字文呢？" class="headerlink" title="你TM文科呢？写千字文呢？"></a>你TM文科呢？写千字文呢？</h2></li>
-<li><p>传统艺能——作业<strong>发布后</strong>一改再改<br><img src="/images/201107.png"></p>
-</li>
-<li><p>作业提交形式极其不合理</p>
-<h2 id="multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？"><a href="#multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？" class="headerlink" title="multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？"></a>multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？</h2></li>
-<li><p>Tutorial视频不传内网传piazza</p>
-<h2 id="TM逗我玩？你TM在搞笑么-真就看得起上科的出口带宽咯？"><a href="#TM逗我玩？你TM在搞笑么-真就看得起上科的出口带宽咯？" class="headerlink" title="TM逗我玩？你TM在搞笑么?真就看得起上科的出口带宽咯？"></a>TM逗我玩？你TM在搞笑么?真就看得起上科的出口带宽咯？</h2><p><img src="/images/201107_2.png"></p>
-</li>
-</ol>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/11/04/201104/">
-                201104
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-11-04</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>睡过头了<br>线代和信导都翘了<br>睡得真爽</p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/10/30/201030%E5%87%8C%E6%99%A8/">
-                运用GAL云存档练习GIT的使用
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-10-30</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h1 id="运用GAL云存档练习GIT的使用"><a href="#运用GAL云存档练习GIT的使用" class="headerlink" title="运用GAL云存档练习GIT的使用"></a>运用GAL云存档练习GIT的使用</h1><h2 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h2><h5 id="比较生疏，所以选择首先云端新建"><a href="#比较生疏，所以选择首先云端新建" class="headerlink" title="比较生疏，所以选择首先云端新建"></a>比较生疏，所以选择首先云端新建</h5><p>本地GAL大目录重命名一下，改成英文字符如<code>Floral_flowlove</code><br>由于存档本来已经摆放好，因此直接<code>git init</code><br>我们只需要同步存档，而不需要管别的游戏文件<br>因此自然想到直接<code>git add savedata\</code><br>（什么？您想把github当网盘使？那随便）<br><em>这样做貌似有时会出bug，偶尔会提升<code>untracked files present</code>，一通操作又好了，很玄学</em><br>保险的做法是<code>touch .gitignore</code>然后<code>git add .gitignore</code></p>
-<h2 id="设置上游"><a href="#设置上游" class="headerlink" title="设置上游"></a>设置上游</h2><p><code>git remote add origin</code><br><code>git branch --set-upstream-to=origin/master</code></p>
-<h2 id="开始同步"><a href="#开始同步" class="headerlink" title="开始同步"></a>开始同步</h2><p><code>git add savedata/</code><br>（如果是BGI还要<code>add bgi.gdb</code>）<br><code>git commit -m &quot;balabala&quot;</code><br>然后是<strong>最愉快的</strong><code>git push origin</code></p>
-<h3 id="设备间同步"><a href="#设备间同步" class="headerlink" title="设备间同步"></a>设备间同步</h3><p>笔记本？台式？平板？<br>No problem!</p>
-<ul>
-<li>每次结束游戏时记得<code>git push</code>一下</li>
-<li>不然的话……<h3 id="冲突合并"><a href="#冲突合并" class="headerlink" title="冲突合并"></a>冲突合并</h3><code>git stash</code>在没有add之前可以放弃更改<br><code>git merge</code>手动选择存档<br>（krkr的<code>config.sav``global.sav``read.sav</code>需要手动操作一下；BGI的<code>bgi.gdb</code>同理）<br>想要回退版本时<code>git reset HEAD^--hard</code></li>
-</ul>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><blockquote>
-<p>这条线也想推，那条线也想打，dd怎么办？（都是弃坑的借口x</p>
-</blockquote>
-<p>没问题 git来帮你！（x<br><strong>以花天使为例</strong></p>
-<blockquote>
-<p>我！想！推！七！绪！</p>
-</blockquote>
-<p><code>git branch nanao</code><br><code>git checkout nanao</code><br>或者<code>git checkout -b nanao</code><br>（进行游戏</p>
-<p><code>git branch --set-upstream-to=origin/nanao nanao</code><br><em>因为开头在remote新建仓库的历史遗留问题</em><br><code>git push</code></p>
-<blockquote>
-<p>我！想！推！大！小！姐！</p>
-</blockquote>
-<p><code>git checkout master</code><br>（但这样还不够！</p>
-<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>在GAL场景下应该不存在吧？？？（你好，存在的</p>
-<blockquote>
-<p>当你打完所有线路准备进TE的时候……</p>
-</blockquote>
-<ul>
-<li>我想回到master分支打TE，怎么办？<br><code>git checkout master</code><br>现在的主分支应该是比nanao分支慢N个提交的<br>但我们需要的是把已读文本数据、游戏进度数据（要开TE）和（可能修改过的）系统设置合并过来</li>
-</ul>
-<p><strong>事实上，无论如何切换分支，已读文本数据、游戏进度数据和系统设置都应该被保持最新。</strong><br><code>git merge nanao</code><br>这时你一定会发现冲突了<br>记住，在任何时候你都可以<code>git merge --abort</code>弃坑报平安。</p>
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><ul>
-<li>逐渐加深感情，终于到了H scene了……<br><code>git tag firstH</code><br>记录下这一珍贵的瞬间（x</li>
-</ul>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -432,19 +402,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2021/03/21/2021-03-21-210321%E5%B9%B6%E6%84%9F/">210321抽卡游戏并感</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2021/03/10/2021-03-10-%E5%85%B8%E5%9E%8B%E5%AF%9D%E5%AE%A4%E4%B8%80%E6%97%A5/">典型寝室一日</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2021/03/05/2021-03-05-%E6%9D%82%E8%AE%B0/">210305思修课杂记</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2021/03/02/2021-03-02-210302%E6%9D%82%E8%AE%B0/">210302杂记</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2021/02/19/trinoline/">trinoline</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2021/02/13/2021-01-30-11%E6%9C%88%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%87%E3%82%A3%E3%82%A2/">11月のアルカディア（剧透警告）</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2021/02/12/SHTU-VPN%E5%AE%89%E5%8D%93%E9%85%8D%E7%BD%AE/">SHTU VPN安卓配置</a>
             </li>
             
         </ul>
