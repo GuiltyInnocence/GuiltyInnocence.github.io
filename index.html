@@ -140,6 +140,160 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2021/04/14/2021-04-14-%E5%AF%B9%E5%90%84%E7%A7%8D%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%9C%8B%E6%B3%95/">
+                对各种小程序/客户端的一点看法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-04-14</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p><em>其实是接<a href="https://guiltyinnocence.github.io/2021/03/02/2021-03-02-210302%E6%9D%82%E8%AE%B0/">前作</a>的(x)</em></p>
+<hr>
+<p><strong>如果是2010年代生人的话，大概是不会知道网址是什么东西了吧。</strong></p>
+<p>想当年（印象里）某些广告中还会有类似于</p>
+<blockquote>
+<p>请登陆我们的官方网站，三达不溜点XX点炕</p>
+</blockquote>
+<p>这种广告语。<br>事实上，Uniform Resource Locator (URL) 这东西在比较早期的互联网就已经出现了（据<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/URL">Wikipedia</a>介绍是1994年）。这部分我没发言权，毕竟那个时候组成我的C可能还分散在空气中的CO2里呢（</p>
+<p>早期互联网在基于浏览器的基础上（就是我们熟悉的网络聊天室，IE统治浏览器市场那个年代），输入URL并不是一件少见的事情。因此，在域名出现之后，抢注短小精悍，寓意美好，便于记忆的<strong>域名</strong>一度成为过热潮（甚至还有抢注域名投资的）。之后是博客的热潮。部落格，这词曾经是网络用语，流行词汇啊（战术后仰）。<br>后来，塞班和早期安卓出现了，同时产生了<strong>WAP网页</strong>的概念（记得前前一阵子的“手机淘宝WAP版关闭强制切换触屏版”那事吧）。这个时期，上网冲浪仍然没有离开浏览器的领域，在手机上，当年最流行的是Opera（印象里…来源请求），它适配各种非智能系统，功能强大。<br>再后来，乔帮主改变了手机。于是各种智能机迅速发展，与之对应的软件生态也迅速发展。独立APP逐渐开始取代传统的浏览器。<br>说到手机啊，就不得不提一下用户交互模式。手机的交互模式和传统的键鼠大不相同，这就给设计者带来了极大的挑战。比如，当年的黑莓（还有部分Nokia）就保留了全键盘，或者其他更多选择方向键的。然而，人们发现在小小手机上全键盘打字并非轻松愉快的事情（于是出现了九宫格神教hhh），特别是触摸屏虚拟键盘。而手机它能触摸啊！那为什么不做触摸的交互设计呢？于是，手机app开始脱离网页的发展轨道，自成一套设计风格。<br>时间到了近几年。触摸交互模式本来是一种为了提高效率改进体验的东西，然而在一群资本家的摆弄底下，成了坑害用户的手段。<br>你是否曾遇到过这种情况？</p>
+<ul>
+<li>百毒贴吧，打开客户端查看评论</li>
+<li>百毒。请使用百毒APP打开，不然不让搜，不停弹出对话框<br><del>题外话，手机浏览器UA/header访问百毒，第一条推荐新闻一定是一手遮天有关的XD，而电脑不会</del></li>
+<li>逼乎，请选择在何处继续浏览（逼乎客户端 or 逼乎客户端 XD）</li>
+<li>WX/QQ内嵌小程序。以阿B小程序为例，如果账号不是绑定QQ的登录多烦，关键是转不出去，还不给你源网址，转发之后，也是得小程序打开，形成一个垄断闭环（里评论：TX这的确有种“坑的就是你们不懂”的感觉）。即使你想出去，唯一的途径是“APP中打开”，你想用浏览器？门都没有</li>
+</ul>
+<p>是不是一个成熟的支持ES10,AJAX,html5,CSS……的现代浏览器不配浏览你们的网站了？据我所知，某些懒惰的APP甚至是一个WebView了事，浏览体验能比chrome好？（x</p>
+<p>当然不是。客户端的存在，都是套路。</p>
+<h4 id="客户端能干什么？"><a href="#客户端能干什么？" class="headerlink" title="客户端能干什么？"></a>客户端能干什么？</h4><ul>
+<li><strong>关联启动，开机启动，后台服务，守护进程</strong>…</li>
+<li><strong>推送通知</strong>。这里面可大有文章啦（战术后仰。可以通过与软件无关的用户关心的内容来引诱用户在非使用时段打开app（比如缺德地图，老缺德了，根据你所在地记录推送当地相关新闻）；可以定时推送广告；更可以通过标题党推送通知（比如某宁易狗，推送“你购买的XX商品已发货”实际根本没买过就是广告，或者“恭喜获得XXX资格”，还有“你预约的XXX开抢了”实际根本没预约过）引诱用户。</li>
+<li><strong>内置广告</strong>。这里面套路就更多了。下图中点击哪个是正确的？（战术后仰<img src="./images/210414.jpg"></li>
+<li><strong>权限获取</strong>。最严重的是相册权限和存储权限。这两个因为实际功能很可能也会用到，所以完全无法判断是否滥用了权限。我把你相册全部enumerate一遍全传服务器上都是可以的，同样我也可以把你整个存储的东西扫描一遍。</li>
+</ul>
+<h4 id="小程序能干什么？"><a href="#小程序能干什么？" class="headerlink" title="小程序能干什么？"></a>小程序能干什么？</h4><ul>
+<li>形成<strong>用户闭环</strong>。特别地，对于阿里和TX的软件（支付婊，薇信，QQ）来说，巩固垄断地位。仍然以阿B小程序为例。比如，用户对其他内容（B站）的浏览，原先可能在浏览器或者app，现在在你软件里的小程序里浏览了。（毕竟投资人还是喜欢看你的<strong>用户粘度</strong>和<strong>日均/月均使用时长</strong>的XD）</li>
+<li>剥夺最后一丝用户主动权。在这之前，应用内打开通常用的是应用内浏览器，并且会正经有“复制链接”按键，是可以转到外部浏览器的。但小程序那可是要遵守两家<strong>自己定的规范</strong>的，比如薇信的WXML。而自己定的规范意味着我可以没有对应的网页，所有内容只能在小程序里加载，同时拥有了所有控制权。（类比一下，听说过Google Analytics吧，大数据是怎么来的，那背后都是大公司基于垄断的数据采集啊）</li>
+<li>一切最终要达到的就是这种所有流量都从我这儿过的效果。</li>
+</ul>
+<p>上面说的看起来很恶毒，这么搞还有人会用你的软件吗？<br>当然有。内容的外层包装一定要保证在用户的舒适区。比如，搞两个流行的东西，做个小程序，用户谁管你能不能获得网页网址外部浏览器，从众追潮流要紧，能应用内转发给别人就够了（想想支付婊为啥想做社交功能，眼馋这个大蛋糕啊）。<br>这里涉及到社会学问题。比如思考这样一个问题，跟一个非码农普通人说扫码，他想到的动作是什么？薇信扫码，或者支付婊扫码。你看，这里已经形成社会效应了（换句话说人们已经被洗脑了233），根本没有人知道扫码是解码获取URL再访问网页。形成这种效应之后，你甚至可以再更换内容标准，于是这样连没有形成效应的人也被迫接受，但这时他们的不满已经不能影响大局了。比如编码前明文是<code>wx://artical.micromsg/bae20502c4e0bdd01ab93d502b4d6fe5737f9baec7c5d377ebac66657e38f6ef</code>，只有他的客户端才能看懂是什么。<del>这是19260817的<code>sha256sum</code>，你看出来了吗</del></p>
+<p>现代人用客户端，已经全是点点点了。分享也是一键分享，唤起应用。或许是2010年代生人，是真的不会知道网址是什么东西了吧。<br>还是用熟悉的结语吧。</p>
+<blockquote>
+<p>随着商品的科技含量增加，商品的功能越来越复杂，消费者对商品质量的遍别越来越困难，生产经营者对商品的了解要比消费者多得多。<br>——高中政治课本必修一《经济生活》，人民教育出版社</p>
+</blockquote>
+<hr>
+<p>题外章节。关于URL的消亡，还有一个东西起了推动作用——二维码。二维码就解决了手机键盘输入网址不方便的问题。比较好笑的是，现在很多人发给别人东西，喜欢分享二维码，而不是更方便的把链接发过去。接受方还得解码，获得的一样还是网址，何必呢，搁这加密通信是吧，我寻思二维码这也不加密啊，还把传输容量增加了几千倍呢。<br>其实二维码的真正使用场景是这些：</p>
+<ol>
+<li>非数字化场合表示数字信息。比如传单，标签等印刷品，这些是很完美的应用。</li>
+<li>想要从屏幕向终端设备传递信息时。比如群二维码放大屏幕上大家加群，这是很完美的应用。Chrome最近把显示网址二维码整合进官方功能里了，就是这种用途。</li>
+<li>以图片形式存储信息。这本不是一般的应用，但二维码做美化加装饰之后做成数字名片性质的东西效果倒也是不错的。<br>而现实是：<br>（qq消息）长按扫描二维码<br>（这里甚至还可以包含绕过审查的意图，即危险网址的明文链接会遭到屏蔽，采用图片二维码手段躲避屏蔽。但看看TX那个“网址不交钱？危险网站千万别访问”的样子，还是算了，审了起反效果，哎）</li>
+</ol>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/04/09/2021-04-09-REMEMBER11/">
+                REMEMBER11
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-04-09</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="剧透警告"><a href="#剧透警告" class="headerlink" title="剧透警告"></a>剧透警告</h1><p>悟篇。<br>冰雪中尸体的身份可以说给谜题阶段性解开失去乐趣的游戏重添相当多的期待感。<br>继续推进，已经可以发现问题了。<br>人是谁杀的？<br>心问是谁杀的，被杀时悟的意识不在。</p>
+<p>接下来提示已经很明显了<br>犬伏进了男主<br>所以杀人+自残<br>而且进了内海<br>所以杀人<br>但不对啊<br>知道润一</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/03/29/2021-03-29-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E7%BB%93%E5%90%88%E4%B8%8A%E4%B8%8B%E8%AF%AD%E5%A2%83%E5%B0%B1%E7%9C%8B%E4%B8%8D%E6%87%82%E7%9A%84%E5%86%85%E5%AE%B9/">
+                有什么不结合上下语境就看不懂的内容?
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-03-29</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <blockquote>
+</blockquote>
+<p>语境: 大佬在安装Debian替换原来的CentOS<br>指Debian的文档挺香的</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/03/24/2021-03-24-210324-Little-Endian/">
+                210324 Little-Endian
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-03-24</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">uint32_t</span> a = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">uint16_t</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">uint16_t</span> y = <span class="number">20</span>;</span><br><span class="line">a = (x &lt;&lt; <span class="number">16</span>) | y;</span><br><span class="line"><span class="keyword">uint16_t</span>* res = (<span class="keyword">uint16_t</span>*) &amp;a;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%u %u\n&quot;</span>, *res, *(res + <span class="number">1</span>)); <span class="comment">//output: 20 10</span></span><br></pre></td></tr></table></figure>
+
+<p>Windows和Linux都是小端<br><code>x=0x000a</code><br><code>y=0x0014</code><br><code>a=0x000a0014</code><br>在内存中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">低地址-------&gt;高地址</span><br><span class="line">x    0a 00</span><br><span class="line">y    14 00</span><br><span class="line">a    14 00 0a 00</span><br><span class="line">      ^res    ^res+1</span><br><span class="line">      20         10</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2021/03/21/2021-03-21-210321%E5%B9%B6%E6%84%9F/">
                 210321抽卡游戏并感
             </a>
@@ -192,174 +346,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2021/03/05/2021-03-05-%E6%9D%82%E8%AE%B0/">
-                210305思修课杂记
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2021-03-05</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>思修课。<br>有人发言：<br>著名的军事家艾伦耶格尔说过</p>
-<p>半个教室笑疯了<br>半个教室一脸懵逼<br>对比极其明显</p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2021/03/02/2021-03-02-210302%E6%9D%82%E8%AE%B0/">
-                210302杂记
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2021-03-02</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>恭喜TX的垄断大业又迈出了坚实一步（</p>
-<blockquote>
-<p>今天有同学问我，升了android 11之后没法访问<code>0\Android\data</code>文件夹了。我寻思大概是加强了安全策略吧。找了找，果然有类似问题。<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/420023759/answer/1503661097">如何评价在Android11中，/Android/data文件夹无法读写？ - 竹林里有冰的回答 - 知乎</a></p>
-</blockquote>
-<p>众所周知，自从挺久之前，TX就把手Q接收文件的目录从<code>0/tencent/QQfile_recv</code>移到<code>0/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv</code>了，而微信貌似更早。（题外话，虽然很看不起蓝厂系统，但它文件管理带了“微信文件”“QQ文件”俩按钮，挺方便。而从不知什么时候开始，这俩都不能用了，原因同上）其实稍微明眼一点的人基本清楚TX之前吃相已经很难看了——</p>
-<ul>
-<li>网址不交钱？危险网站千万别访问（</li>
-<li>想打开接收的文件？不给你安卓默认文件打开接口对话框，自己来个GUI。3层深度隐藏入口，引导安装QQ浏(liu)览(mang)器<ul>
-<li>事实上，笔者自己android10机器就有pdf文件绕过三层对话框用onedrive打开后od闪退的问题，虽然这个多半不是TX背锅，但起到了引导用户的目的。真有你的</li>
-</ul>
-</li>
-<li>前段时间闹得沸沸扬扬（指程序员界）的PCQQ读取个人信息上传的事件。在发现后台服务在软件未启动仍常驻运行时就应该有点警觉性了嘛~</li>
-<li>但凡刷过QQ空间的人都知道，无论你网有多好，刷四五条说说之后下拉一定会卡，并且卡着显示的最后一条一定是广告。</li>
-<li>坦白说。什么叫用户画像啊（战术后仰</li>
-<li>etc 太多了举不完</li>
-</ul>
-<hr>
-<blockquote>
-<p>随着商品的科技含量增加，商品的功能越来越复杂，消费者对商品质量的遍别越来越困难，生产经营者对商品的了解要比消费者多得多。<br>——高中政治课本必修一《经济生活》，人民教育出版社</p>
-</blockquote>
-<p>大环境是这样的。</p>
-<p>可笑的是，政府都在高中阶段课本中写明告诉我们了，然而还是很多人当韭菜= =</p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2021/02/19/trinoline/">
-                trinoline
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2021-02-19</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>空灵感。<br>如无数细碎脆弱的泡沫。<br>断片。<br>澄澈感。</p>
-<p>如果说神作巨著像一份饕餮大餐般，华美惊艳，那这作的剧本氛围就好似一杯午后红茶，静谧舒心，亦同样是美好。<br>挺喜欢这种剧本氛围。<br>最适合夜深人静时，用最心灵深处柔软的部分包裹住它。</p>
-<p>放空理性，用心灵深处柔软的感性去接受它。</p>
-<p>这是第一印象给人留下的这作的鉴赏方式。<br>这种剧本同样不适合用逻辑理性观看。<br>更准确地说，是生冷坚硬的理性会将柔弱脆弱的如泡沫般的故事给碾碎。</p>
-<p>你想试试理性分析？那好，来。</p>
-<p>剧情前后联系松散，缺乏连贯整体性，没有一气呵成感。<br>（里评论：特别是前后半，感觉前半基本没有任何意义，特别是共通线hs简直是败笔233）<br>部分情节交代暧昧。<br>情感发展缺乏展开叙述。</p>
-<p>传统剧本理论中谋篇布局都讲究目的，艺术手法强调突出，对比衬托先抑后扬，叙述节奏快慢详略；对缺点/矛盾的成长过程叙述表达主旨，已经完美的设定则非其表达重点……</p>
-<p>这作的剧本风格与之相反。比如你要认真分析，那好，来。</p>
-<p>对女主白音（android）的设定中缺少进食功能，这么设定的意图在何<br>瞻前顾后没有发现与之相符的内涵表达。</p>
-<p>相似的还有很多，所谓的无意义情节。<br>将它们当成都合のいい的东西就差不多了。<br>大大小小分离的泡沫。<br>用类似单元剧的形式欣赏看看。 </p>
-<hr>
-<p>夕梨线。<br>剧本。<br>不是以讨论<code>trino存在会有何影响</code>这个论题的形式，而是直接给出了一种看法。<br>跟了剧本的节奏走，阅读下去，你才知道这个看法。<br>当你看男主看不下去的时候，是结果论的不由分说在压迫着你。<br>（这种<strong>主观性</strong>的最明显表现就是，剧本喂屎到让你玩不下去了，你却一点办法没有。这东西如果我是脚本我确定、一定、肯定会续上一个诚哥结局233）<br>（<em>里评论：这是决定一部作是不是电波的一种关键。</em>）<br>这么表达很模糊。这样说吧。</p>
-<p>剧本情节以**<code>trino是原罪</code>**为基调命题出发，以此构造情节，阅读下去，你会知道这个命题；主观，结论为先，不存在问题。</p>
-<p>而（启发）讨论式一般形式是以问题为出发点构造情境，随后或是用情节引导思考方向，或是利用选择肢在探索中主动思考；客观，问题为先，结论为后。</p>
-<p>trino真的复原了人的思考方式吗？<br>抑或是存在独立人格？<br>trino是原罪。<br>过于接近理想，太具有诱惑力，使人迷失方向。<br>使人迷失方向？<br>使男主迷失方向。<br>男主。<br>男主是什么性质？<br>视角载体，抑或是推动情节的关键人物？<br>男主自身的品格特质有没有对情节走向造成关键影响？<br>男主作为剧中人的行为是否蕴含着想要表达的主旨？<br>根据模型，男主行为起推动剧情作用。<br>越被带偏越迷茫，而又越依赖trino<br>陷入无尽的深渊。</p>
-<blockquote>
-<p>在男主没有做好觉悟就接受恋人关系的那一刻，一切就已经输了。</p>
-</blockquote>
-<p>试着构图trino的人格。<br><code>私だったら、舜を幸せにできるのに</code><br><del>老狐狸精了（小声bb (x (x (x</del><br>披着皮的不知何物。<br>毛骨悚然。<br>那么这时候让我们回头看看。<br>三原则。<br>注定了Trino无法成为人类，无法替代人类的思考。<br>特别是第一原则。<br>注定了trino只能成为看似什么都骄纵人类，实则什么都无法解决的祸根。<br>*(里评论：这里猜中剧本了233)*<br>BAD END。<br>令人作呕的程度。<br>正确的一方折磨至死。错误的一方仍在蛊惑。<br>就是如此鲜明的对立。</p>
-<p>在此处转折。<br>每个情节的set都有其后效，有时可能并不是你想要的。<br>比如为了剧情连贯加入的情节，可能会改变某个角色所呈现在外的性格特点。<br>此处男主反转，更显得其优柔寡断。<br>好在主观性情节构造的大前提下，着并不会有太大的影响。</p>
-<p>反转，却并没有走出泥潭。</p>
-<p>到这种程度，怕是只能用执迷不悟来形容了。</p>
-<p>在这里，生死观的讨论，却并没有采用主观性情节构造。<br>男女主的对立，是作为一个问题留给观众思考的。<br>（里评论：我不承认小丑是我自己233）<br>我不认为这个结局是大欢喜的。<br>至少不是TE。<br>反转之中，丢失了什么，忽视了什么？</p>
-<p>勇气创造未来。<br>主题是好的。<br>但挺突兀不是么。<br>（里评论：男主还失忆着呢喂）</p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2021/02/13/2021-01-30-11%E6%9C%88%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%87%E3%82%A3%E3%82%A2/">
-                11月のアルカディア（剧透警告）
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2021-02-13</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h2 id="210130"><a href="#210130" class="headerlink" title="210130"></a>210130</h2><p>全员内鬼<br>世界线外的观测者</p>
-<h2 id="210213-正月初二"><a href="#210213-正月初二" class="headerlink" title="210213 正月初二"></a>210213 正月初二</h2><p>世纪大坑补完。</p>
-<blockquote>
-<p>190114 ~ 210213（761天）<br>从高中坑到大学</p>
-</blockquote>
-<p><em>大年初一推GAL（其实是初二凌晨</em></p>
-<p><strong>绝对真实不掺任何屎的GE</strong>。</p>
-<ul>
-<li>基础分 7.5</li>
-<li>GE个人感情分 +1.5</li>
-<li>总分 9.0</li>
-</ul>
-<p>最初跟很多人一样是一首OP一首airu角色歌入坑的。</p>
-<h2 id="结局部分"><a href="#结局部分" class="headerlink" title="结局部分"></a>结局部分</h2><p>把所有伏笔回收都做了<br>但伏笔回收没有起到反转一波三折的作用<br>就是给剧情添加了一点小困难小绊脚石，实际效果不好<br>（特别是本来非常期待<code>宝玉的愿望</code>，根据情况这甚至能让主线转向发展。结果…就给剧情推了一把可还行）<br>而且各种人物蹦出来显得剧情上下相当混乱，一个打倒了一个蹦出来。</p>
-<h2 id="剧情"><a href="#剧情" class="headerlink" title="剧情"></a>剧情</h2><p>乍看牵强，细想其实全都说得过去，逻辑上还是都能自圆其说的。<br>到了后半部分看点基本就变成了到底是GE还是BE（又或是能升华一下给更高层次的GE</p>
-<p>全作最精彩的部分应该就是中间的男主反转了<br>反而后面的一次次轮回就单纯只是在喂屎<br>喂的人很想进个人线<br>而且全员内鬼是真的有点扯了<br>但好在轮回喂的屎跟结局最终到达的理想乡对比效果奇佳，艺术效果极好。<br>虽然大框架只是单纯的男主历经千辛万苦获得幸福的故事，但最后结局还是感人啊<br>绝对真实真正意义不掺任何别物的GE。<br>可喜可贺可喜可贺。</p>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -402,19 +388,19 @@
         <ul>
             
             <li>
-                <a class="footer-post" href="/2021/03/21/2021-03-21-210321%E5%B9%B6%E6%84%9F/">210321抽卡游戏并感</a>
+                <a class="footer-post" href="/2021/04/14/2021-04-14-%E5%AF%B9%E5%90%84%E7%A7%8D%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%9C%8B%E6%B3%95/">对各种小程序/客户端的一点看法</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2021/03/10/2021-03-10-%E5%85%B8%E5%9E%8B%E5%AF%9D%E5%AE%A4%E4%B8%80%E6%97%A5/">典型寝室一日</a>
+                <a class="footer-post" href="/2021/04/09/2021-04-09-REMEMBER11/">REMEMBER11</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2021/03/05/2021-03-05-%E6%9D%82%E8%AE%B0/">210305思修课杂记</a>
+                <a class="footer-post" href="/2021/03/29/2021-03-29-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E7%BB%93%E5%90%88%E4%B8%8A%E4%B8%8B%E8%AF%AD%E5%A2%83%E5%B0%B1%E7%9C%8B%E4%B8%8D%E6%87%82%E7%9A%84%E5%86%85%E5%AE%B9/">有什么不结合上下语境就看不懂的内容?</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2021/03/02/2021-03-02-210302%E6%9D%82%E8%AE%B0/">210302杂记</a>
+                <a class="footer-post" href="/2021/03/24/2021-03-24-210324-Little-Endian/">210324 Little-Endian</a>
             </li>
             
         </ul>
