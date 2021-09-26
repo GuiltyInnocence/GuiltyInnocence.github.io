@@ -140,13 +140,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2020/10/30/201030%E5%87%8C%E6%99%A8/">
-                运用GAL云存档练习GIT的使用
+            <a href="/2020/11/22/2020-11-22-One-Room-S3-%E8%A7%82%E8%AF%84/">
+                One Room S3 观评
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2020-10-30</span>
+                <span class="date">2020-11-22</span>
             
             
             
@@ -155,38 +155,8 @@
 
     
         <div class="content">
-            <h1 id="运用GAL云存档练习GIT的使用"><a href="#运用GAL云存档练习GIT的使用" class="headerlink" title="运用GAL云存档练习GIT的使用"></a>运用GAL云存档练习GIT的使用</h1><h2 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h2><h5 id="比较生疏，所以选择首先云端新建"><a href="#比较生疏，所以选择首先云端新建" class="headerlink" title="比较生疏，所以选择首先云端新建"></a>比较生疏，所以选择首先云端新建</h5><p>本地GAL大目录重命名一下，改成英文字符如<code>Floral_flowlove</code><br>由于存档本来已经摆放好，因此直接<code>git init</code><br>我们只需要同步存档，而不需要管别的游戏文件<br>因此自然想到直接<code>git add savedata\</code><br>（什么？您想把github当网盘使？那随便）<br><em>这样做貌似有时会出bug，偶尔会提升<code>untracked files present</code>，一通操作又好了，很玄学</em><br>保险的做法是<code>touch .gitignore</code>然后<code>git add .gitignore</code></p>
-<h2 id="设置上游"><a href="#设置上游" class="headerlink" title="设置上游"></a>设置上游</h2><p><code>git remote add origin</code><br><code>git branch --set-upstream-to=origin/master</code></p>
-<h2 id="开始同步"><a href="#开始同步" class="headerlink" title="开始同步"></a>开始同步</h2><p><code>git add savedata/</code><br>（如果是BGI还要<code>add bgi.gdb</code>）<br><code>git commit -m &quot;balabala&quot;</code><br>然后是<strong>最愉快的</strong><code>git push origin</code></p>
-<h3 id="设备间同步"><a href="#设备间同步" class="headerlink" title="设备间同步"></a>设备间同步</h3><p>笔记本？台式？平板？<br>No problem!</p>
-<ul>
-<li>每次结束游戏时记得<code>git push</code>一下</li>
-<li>不然的话……<h3 id="冲突合并"><a href="#冲突合并" class="headerlink" title="冲突合并"></a>冲突合并</h3><code>git stash</code>在没有add之前可以放弃更改<br><code>git merge</code>手动选择存档<br>（krkr的<code>config.sav``global.sav``read.sav</code>需要手动操作一下；BGI的<code>bgi.gdb</code>同理）<br>想要回退版本时<code>git reset HEAD^--hard</code></li>
-</ul>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><blockquote>
-<p>这条线也想推，那条线也想打，dd怎么办？（都是弃坑的借口x</p>
-</blockquote>
-<p>没问题 git来帮你！（x<br><strong>以花天使为例</strong></p>
-<blockquote>
-<p>我！想！推！七！绪！</p>
-</blockquote>
-<p><code>git branch nanao</code><br><code>git checkout nanao</code><br>或者<code>git checkout -b nanao</code><br>（进行游戏</p>
-<p><code>git branch --set-upstream-to=origin/nanao nanao</code><br><em>因为开头在remote新建仓库的历史遗留问题</em><br><code>git push</code></p>
-<blockquote>
-<p>我！想！推！大！小！姐！</p>
-</blockquote>
-<p><code>git checkout master</code><br>（但这样还不够！</p>
-<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>在GAL场景下应该不存在吧？？？（你好，存在的</p>
-<blockquote>
-<p>当你打完所有线路准备进TE的时候……</p>
-</blockquote>
-<ul>
-<li>我想回到master分支打TE，怎么办？<br><code>git checkout master</code><br>现在的主分支应该是比nanao分支慢N个提交的<br>但我们需要的是把已读文本数据、游戏进度数据（要开TE）和（可能修改过的）系统设置合并过来</li>
-</ul>
-<p><strong>事实上，无论如何切换分支，已读文本数据、游戏进度数据和系统设置都应该被保持最新。</strong><br><code>git merge nanao</code><br>这时你一定会发现冲突了<br>记住，在任何时候你都可以<code>git merge --abort</code>弃坑报平安。</p>
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><ul>
-<li>逐渐加深感情，终于到了H scene了……<br><code>git tag firstH</code><br>记录下这一珍贵的瞬间（x</li>
-</ul>
+            <h3 id="FMF的曲作越来越神仙了"><a href="#FMF的曲作越来越神仙了" class="headerlink" title="FMF的曲作越来越神仙了"></a>FMF的曲作越来越神仙了</h3><p>各种风格都出来了<br>小看奥井康介了啊<br>搞得现在看OneRoom不是为了角色而是冲着ED去的（x</p>
+<h1 id="我永远喜欢琴川晶"><a href="#我永远喜欢琴川晶" class="headerlink" title="我永远喜欢琴川晶"></a>我永远喜欢琴川晶</h1><p>学妹系赛高！</p>
 
         </div>
     
@@ -198,13 +168,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2020/10/28/201028/">
-                201028早八前
+            <a href="/2020/11/22/201121-OpenWRT%E6%8C%82%E8%BD%BDusb%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/">
+                201121随记+OpenWRT挂载usb实现文件共享
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2020-10-28</span>
+                <span class="date">2020-11-22</span>
             
             
             
@@ -213,7 +183,21 @@
 
     
         <div class="content">
-            <h3 id="早八的日子"><a href="#早八的日子" class="headerlink" title="早八的日子"></a>早八的日子</h3><p>两个室友<br>一个设了七点的闹钟，叫醒了除自己以外的所有人！<br>一个听见七点的闹钟，就起来卷了！<br>我****</p>
+            <h1 id="日常折腾，我又不会了"><a href="#日常折腾，我又不会了" class="headerlink" title="日常折腾，我又不会了"></a>日常折腾，我又不会了</h1><h3 id="更换无线密码（弱密码）为强密码"><a href="#更换无线密码（弱密码）为强密码" class="headerlink" title="更换无线密码（弱密码）为强密码"></a>更换无线密码（弱密码）为强密码</h3><p>密码非常的骚<br>我一边配一边笑抽<br>结果改密码遇上非常奇葩的事情（一切都是因为<strong>用了无线连接+图形管理界面的锅</strong><br>    - 改好密码，配置应用。自然，电脑是会断网的。忘记网络，输新密码，重连，看起来不错。<br>    - 但！是！这时候浏览器不安分了！网页前端脚本（应该是）在90s检测不到路由器在线后，执行回滚更改命令。恰巧这个时候我输入新的密码连上路由器了，于是……<br>    - 密码被回滚了<br>    - CNMSB<br>    - 后来直接关网页+清cookie解决</p>
+<h3 id="Linux使用iwd设置新的密码"><a href="#Linux使用iwd设置新的密码" class="headerlink" title="Linux使用iwd设置新的密码"></a>Linux使用iwd设置新的密码</h3><ul>
+<li>win底下傻瓜操作有手就行</li>
+<li>轮到Linux了。<br>自然是<code>iwctl</code><h4 id="注意！忘记网络known-networks-SSID-forget"><a href="#注意！忘记网络known-networks-SSID-forget" class="headerlink" title="注意！忘记网络known-networks SSID forget"></a>注意！忘记网络<code>known-networks SSID forget</code></h4></li>
+<li>然后正常<code>station device connect SSID</code><h3 id="spinach大佬又来帮忙（？）折腾了，装i3"><a href="#spinach大佬又来帮忙（？）折腾了，装i3" class="headerlink" title="spinach大佬又来帮忙（？）折腾了，装i3"></a>spinach大佬又来帮忙（？）折腾了，装i3</h3></li>
+</ul>
+<h1 id="OpenWRT挂载usb实现文件共享"><a href="#OpenWRT挂载usb实现文件共享" class="headerlink" title="OpenWRT挂载usb实现文件共享"></a>OpenWRT挂载usb实现文件共享</h1><blockquote>
+<p>前情提要：50从楼上大佬那收的Netgear R6220。128M内闪存+128M存储（极小），但四口全千兆，2.4/5双频，还有学长售后服务，还要什么自行车</p>
+</blockquote>
+<p>首先，之前已经配置好openssh啦~<br><strong>在ssh的时候一定要带用户名！！！</strong><code>ssh root@192.168.1.1</code><br>然后进入openwrt的后台。</p>
+<hr>
+<p>查资料<br><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/5225f26b6b273fe6fa090829.html">百毒敬烟</a>难得靠谱了一次，照着它淦~<br>收到的时候原物主已经把路由恢复默认了，看一下有什么包<br>噫好耶有一堆usb依赖已经装好了<br><code>lsblk</code>看一下，发现usb已经挂载了<br>那就好办了，直接进行以下操作</p>
+<h2 id="安装剩余依赖"><a href="#安装剩余依赖" class="headerlink" title="安装剩余依赖"></a>安装剩余依赖</h2><p><code>opkg install samba luci-app-samba kmod-fs-ntfs ntfs-3g block-mount</code></p>
+<h2 id="开机挂载"><a href="#开机挂载" class="headerlink" title="开机挂载"></a>开机挂载</h2><p>百毒的是写脚本<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_33726313/article/details/86317155">这博客</a>貌似更靠谱？<br><code>/etc/init.d/samba enable</code><br><code>/etc/init.d/samba start</code></p>
+<h2 id="配置共享"><a href="#配置共享" class="headerlink" title="配置共享"></a>配置共享</h2><p>因为装的是Openwrt-Luci，一切就是如此简单<br>GUI，轻轻松松~<br>777权限，色图随便传（</p>
 
         </div>
     
@@ -225,13 +209,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2020/10/23/201023/">
-                201023 破事多
+            <a href="/2020/11/18/201118-SP_hw3-Regrade%E8%AE%B0/">
+                201118 SP_hw3 Regrade记
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2020-10-23</span>
+                <span class="date">2020-11-18</span>
             
             
             
@@ -240,55 +224,78 @@
 
     
         <div class="content">
-            <h1 id="同方勇气多"><a href="#同方勇气多" class="headerlink" title="同方勇气多"></a>同方勇气多</h1><p>为了搞remote desktop把<strong>万恶的corecountryspecific</strong>改掉了<br><em>巨硬真有你的</em><br>直接输有效professional密钥，直接升级<br>升级完了发现<br>啊机械革命控制台炸了<br><del>同方勇气多</del><br>最后发现重装一下又好了QAQ</p>
-<h1 id="SI100B-牛逼！"><a href="#SI100B-牛逼！" class="headerlink" title="SI100B 牛逼！"></a>SI100B 牛逼！</h1><h4 id="tutorial"><a href="#tutorial" class="headerlink" title="tutorial"></a>tutorial</h4><p>一进门看见大大的正态分布<br>然后突然开始：</p>
+            <h1 id="终于，这天到来了"><a href="#终于，这天到来了" class="headerlink" title="终于，这天到来了"></a>终于，这天到来了</h1><blockquote>
+<p>在所有程序作业使用pdf提交的情况下……<br>迎来了Signal Processing hw3……</p>
+</blockquote>
+<p>——非常漂亮的被misgrade了……<br>原因就是——</p>
+<p>matlab的GUI下拉框对应的<code>cell</code>类型数组不会显示在导出的pdf里<br>导致作业没法批改</p>
+<p><strong>关键TA用词就NM离谱</strong></p>
+<blockquote>
+<p>老兄你这滤波器根本没实现啊</p>
+</blockquote>
+<p>好吧另两种确实没实现，但这用语……</p>
+<h2 id="以后不敢当TA了，鬼知道什么时候会被别人做成人偶钉在柱子上"><a href="#以后不敢当TA了，鬼知道什么时候会被别人做成人偶钉在柱子上" class="headerlink" title="以后不敢当TA了，鬼知道什么时候会被别人做成人偶钉在柱子上"></a>以后不敢当TA了，鬼知道什么时候会被别人做成人偶钉在柱子上</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">Re : SP_HW3 for SI100B Argument</span><br><span class="line"></span><br><span class="line">陈雷全部答复</span><br><span class="line"> 2020年11月18日 15:10</span><br><span class="line">成同学：</span><br><span class="line">ok，我已经把你的成绩加上了，你可以查看一下</span><br><span class="line"></span><br><span class="line">祝好</span><br><span class="line">陈雷</span><br><span class="line"></span><br><span class="line">成鼎浩答复全部答复转发操作</span><br><span class="line">收件人:</span><br><span class="line"> 陈雷 </span><br><span class="line">附件:</span><br><span class="line">task2.mlx‎ (28 KB‎)</span><br><span class="line">已发送邮件2020年11月18日 14:27</span><br><span class="line">陈助教你好：</span><br><span class="line"></span><br><span class="line">matlab原程序已作为附件传送。</span><br><span class="line">多有劳烦，还请见谅。</span><br><span class="line"></span><br><span class="line">成鼎浩(chengdh@)</span><br><span class="line">发件人: 陈雷</span><br><span class="line">发送时间: 2020年11月18日 14:07</span><br><span class="line">收件人: 成鼎浩</span><br><span class="line">主题: 答复: SP_HW3 for SI100B Argument</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">成同学你好：</span><br><span class="line">你的问题我看了，但是你叫上来的就只有一个带通，我肯定没办法给你别的分数，你把你的整个程序用邮件发给我吧，别担心，如果是正确能实现功能，分数我会给你加回来的</span><br><span class="line"></span><br><span class="line">祝好</span><br><span class="line">陈雷</span><br><span class="line">发件人: 成鼎浩</span><br><span class="line">发送时间: 2020年11月18日 0:02</span><br><span class="line">收件人: 陈雷</span><br><span class="line">主题: Re: SP_HW3 for SI100B Argument</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">补充：用户输入部分使用了matlab的图形下拉框，因此在pdf导出时无法显示全部。</span><br><span class="line"></span><br><span class="line">若能及时处理，我将不胜感激！</span><br><span class="line"></span><br><span class="line">成鼎浩(chengdh@)</span><br><span class="line">2020533144</span><br><span class="line">发件人: 成鼎浩</span><br><span class="line">发送时间: 2020年11月17日 23:56</span><br><span class="line">收件人: 陈雷</span><br><span class="line">主题: SP_HW3 for SI100B Argument</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">你好！</span><br><span class="line">我确信q2滤波器的实现是正确的，至少有实现滤波。</span><br><span class="line">请求审核评分。</span><br><span class="line">烦请尽速处理！</span><br><span class="line"></span><br><span class="line">成鼎浩(chengdh@)</span><br><span class="line">2020533144</span><br></pre></td></tr></table></figure>
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/11/16/201116/">
+                201116
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-11-16</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="安装【花萎电脑管家】后桌面右键菜单问题"><a href="#安装【花萎电脑管家】后桌面右键菜单问题" class="headerlink" title="安装【花萎电脑管家】后桌面右键菜单问题"></a>安装【花萎电脑管家】后桌面右键菜单问题</h1><ul>
+<li>为了玩破解版多屏协同必须装这玩意</li>
+<li>桌面右键会多一个<code>显示管理</code>的东西（本来是给花萎笔记本用的）<h2 id="方法：简单粗暴——改注册表！"><a href="#方法：简单粗暴——改注册表！" class="headerlink" title="方法：简单粗暴——改注册表！"></a>方法：简单粗暴——改注册表！</h2></li>
+<li>搜索键值位置？</li>
+<li>直接搜<code>huawei</code>获得进程名称<code>MonitorManager</code></li>
+<li>接着再搜索这个，几下<key>F2</key>之后找到键值位于<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\DesktopBackground\Shell</code></li>
+</ul>
+<p><strong>直接删！</strong>完事~</p>
+<h1 id="淦Arch和Win双系统"><a href="#淦Arch和Win双系统" class="headerlink" title="淦Arch和Win双系统"></a>淦Arch和Win双系统</h1><ul>
+<li>奇怪的现象：win引导再怎么搞也能半分钟修好，有手就行</li>
+<li>昨天先装的Arch</li>
+<li>今天傻乎乎的把ext4分区直接缩小resize，没有走程序<br>——分区炸了，挂载都挂不上那种<br>干脆重装</li>
+<li>注意此时<code>EFI</code>分区保留了</li>
+<li>resize多出来的空间装了win10，<strong>用bios引导+win安装器直接往单目标分区写入</strong>装的（这个时候当然不能进系统啦）<br>然后<strong>用Dism++修复引导，往<code>EFI</code>里写uefi引导</strong><h2 id="结果就可以UEFI启动了？？？？？？？？？？"><a href="#结果就可以UEFI启动了？？？？？？？？？？" class="headerlink" title="结果就可以UEFI启动了？？？？？？？？？？"></a>结果就可以UEFI启动了？？？？？？？？？？</h2></li>
+</ul>
+<p><em>我TM直接懵逼</em></p>
 <ul>
-<li>卷积</li>
-<li>RGB-&gt;YUV</li>
-<li>直方图均衡</li>
+<li>无奈再手动装一遍Arch，这回配好grub，注意全程EFI分区没有格式化过</li>
+<li>然后启动，引导是进win的，但是<strong>蓝！屏！</strong>，显示启动设备不正确（？不记得了）</li>
+<li>于是故技重施，进PE<h2 id="发现最后的NTFS分区（磁盘0分区3）不见了？？？"><a href="#发现最后的NTFS分区（磁盘0分区3）不见了？？？" class="headerlink" title="发现最后的NTFS分区（磁盘0分区3）不见了？？？"></a>发现最后的NTFS分区（磁盘0分区3）不见了？？？</h2></li>
 </ul>
-<h2 id="然后就布置作业了？？？"><a href="#然后就布置作业了？？？" class="headerlink" title="然后就布置作业了？？？"></a>然后就布置作业了？？？</h2><h2 id="？？？"><a href="#？？？" class="headerlink" title="？？？"></a>？？？</h2><p><del>shtech不愧是你</del></p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/10/22/201022/">
-                201022之无所事事
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-10-22</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>为什么突然想起这玩意<br>我也不知道啦啦啦啦啦</p>
-<h3 id="todolist"><a href="#todolist" class="headerlink" title="todolist?"></a>todolist?</h3><ul>
-<li>ctf?<ul>
-<li>计算机网络</li>
-<li>注入</li>
+<p><em>我TM直接懵逼</em></p>
+<ul>
+<li>于是大胆捣鼓，<strong>DiskGenius直接恢复丢失分区</strong>，重建NTFS分区<h2 id="于是Windows好了？？？"><a href="#于是Windows好了？？？" class="headerlink" title="于是Windows好了？？？"></a>于是Windows好了？？？</h2></li>
 </ul>
+<p><em>我TM直接懵逼</em></p>
+<ul>
+<li>然后按照<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jpfss/p/9462792.html">教程</a>在CMD/Powershell里<code>bcdedit /set &#123;bootmgr&#125; path \EFI\ArchLinux\grubx64.efi</code>就可以引导进grub了<blockquote>
+<p>看了一圈，原理应该是把windows boot manager的bootloader(?)指向grub，通过grub再导回windows</p>
+</blockquote>
 </li>
-<li>GAL？</li>
-<li>硬件、垃圾佬？</li>
-<li>泡图书馆？</li>
-<li>作曲？</li>
-<li>剪视频、MAD？</li>
-<li>CV?</li>
+<li>然！后！windows居然出现两个启动项？？？</li>
+<li>第一个正常进系统，第二个<strong>退回grub</strong>？？？<h2 id="搁这套娃呢？？？"><a href="#搁这套娃呢？？？" class="headerlink" title="搁这套娃呢？？？"></a>搁这套娃呢？？？</h2></li>
 </ul>
-<p><strong>哪里能结交到大佬啊呜呜呜呜呜呜</strong></p>
+<p><em>我TM直接懵逼</em></p>
+<h1 id="发现：bios安装的win10用dism-写个uefi就能uefi启动了"><a href="#发现：bios安装的win10用dism-写个uefi就能uefi启动了" class="headerlink" title="发现：bios安装的win10用dism++写个uefi就能uefi启动了"></a>发现：bios安装的win10用dism++写个uefi就能uefi启动了</h1><h1 id="结论：windows的引导怎么折腾都能救回来"><a href="#结论：windows的引导怎么折腾都能救回来" class="headerlink" title="结论：windows的引导怎么折腾都能救回来"></a>结论：windows的引导怎么折腾都能救回来</h1><p><span style="color:red">第二天追加 linux下装了一堆包之后win启动又炸了 这回ntfs分区没问题引导没问题 是奇奇怪怪的锅 万能dism++又修好了 我***</span></p>
 
         </div>
     
@@ -300,13 +307,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2020/01/10/200110/">
-                200110关于GAL引擎的脑洞
+            <a href="/2020/11/14/201114/">
+                201114
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2020-01-10</span>
+                <span class="date">2020-11-14</span>
             
             
             
@@ -315,7 +322,8 @@
 
     
         <div class="content">
-            <p>1 楼主黄油中，听见母上大人走了进来，而音响里正在播放hs语音，情急之下他点击config按键，&lt;config设定&gt;的语音响起同时hs语音停止了。请问他可能在玩以下哪一部作品？（答案siglusengine）<br>2 安艺君玩小黄油中，惠走了进来，他赶忙按下esc启动紧急回避，屏幕上显示出自定义的google地球加载界面。请问他可能在玩以下哪一部作品？（拔月bgi自定义紧急回避界面）<br>3 又是伦理君在玩黄油，这次是平板，没有esc键了。这回金发双马尾败犬走了进来，他急忙按下最小化，音响里的hs语音停止了播放。请问他不可能在玩以下那部黄油？（krkr）</p>
+            <h1 id="勾搭spinach大佬帮忙装了Arch。"><a href="#勾搭spinach大佬帮忙装了Arch。" class="headerlink" title="勾搭spinach大佬帮忙装了Arch。"></a>勾搭spinach大佬帮忙装了Arch。</h1><p>太强了。<br>我只能爬<br>命令根本背不来</p>
+<h1 id="45收了显示器"><a href="#45收了显示器" class="headerlink" title="45收了显示器"></a>45收了显示器</h1><p>血赚<br>1440*900的dvi+vga方案<br>还帮忙送到楼下<br>真的好人</p>
 
         </div>
     
@@ -327,13 +335,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2019/12/30/%E9%87%8E%E8%89%AF%E4%B8%8E%E7%9A%87%E5%A5%B3%E4%B8%8E%E6%B5%81%E6%B5%AA%E7%8C%AB%E4%B9%8B%E5%BF%83/">
-                野良与皇女与流浪猫之心
+            <a href="/2020/11/07/2020-11-07-SB100I-yyds-%E5%9E%83%E5%9C%BE%E5%85%A8%E9%9D%A2%E5%A4%A7%E7%88%86%E5%8F%91/">
+                SB100I yyds 垃圾全面大爆发
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2019-12-30</span>
+                <span class="date">2020-11-07</span>
             
             
             
@@ -342,13 +350,24 @@
 
     
         <div class="content">
-            <p><em>191230</em></p>
-<h2 id="硬性部分"><a href="#硬性部分" class="headerlink" title="硬性部分"></a>硬性部分</h2><h5 id="作画-8-5-of-10"><a href="#作画-8-5-of-10" class="headerlink" title="作画 8.5 of 10"></a>作画 8.5 of 10</h5><p>一开始这种画风很不习惯，玩久了发现真棒啊~</p>
-<h5 id="音乐-8-0-of-10"><a href="#音乐-8-0-of-10" class="headerlink" title="音乐 8.0 of 10"></a>音乐 8.0 of 10</h5><p>整体感受很棒，虽然没有特别亮点但是氛围极佳。</p>
-<h5 id="系统-9-0-of-10"><a href="#系统-9-0-of-10" class="headerlink" title="系统 9.0 of 10"></a>系统 9.0 of 10</h5><p>原生1080p系统，关键是bg/evcg/立绘也是1080好爽啊~（暗讽某万年720的BGI）</p>
-<h5 id="剧本-9-0-of-10-暂评"><a href="#剧本-9-0-of-10-暂评" class="headerlink" title="剧本 9.0 of 10//暂评"></a>剧本 9.0 of 10//暂评</h5><ul>
-<li>Part1 于パトリシア线中途 191230<br>玩到现在有这些感觉吧。<br>首先是剧本的不合常理逻辑部分。<br>内因很明显，就是角色的性格特点和设定特征。回不了家的孩子，不想回家的孩子，个个个性鲜明，大家都自说自话。再加上死者的世界来的パト完全不知人间常识，会碰撞出这种跨服聊天神仙对话一样的剧场也不奇怪。<br>外因就是电波了，反正我是没怎么对上。这部的脚本经常在奇怪的地方切Chapter，感觉戛然而止一样<br>然而这部作品更大的意义在以下<br>本作以创作出来的所谓死者的视角观察生活，这样的确会发现许多生活中我们习以为常，不被察觉的东西/细节，特别是长大成人被常识和逻辑束缚认为理所当然的东西。这种观察和思考能让我们更好的感受生活，并去热爱生活。这和小孩子的好奇心、观察力、想象力，以及天真无邪是一样的道理。它促使我们去思考的习以为常的东西，恰恰是本原的、原初的，又是颇具思考价值的。<br>重点的来了。在上面所述的思维飞天剧本的掩盖下，这种本原的思考便显得顺其自然，毫无违和感，自然地流淌出来。</li>
-</ul>
+            <p>EE部分来了，它来了<br>带着<strong>此前SP和PP都无法比拟的</strong></p>
+<h2 id="荒谬的！"><a href="#荒谬的！" class="headerlink" title="荒谬的！"></a>荒谬的！</h2><h2 id="不负责任的！"><a href="#不负责任的！" class="headerlink" title="不负责任的！"></a>不负责任的！</h2><h2 id="作业！"><a href="#作业！" class="headerlink" title="作业！"></a>作业！</h2><hr>
+<ol>
+<li><p>开幕雷击，第一问让你<strong>上网搜索</strong>某些内容</p>
+<blockquote>
+<p> In this problem, you are asked to search the Internet (google, bing, baidu, etc.), and find out the specific details of these two concepts. </p>
+</blockquote>
+<h2 id="那我上这课干嘛？？？"><a href="#那我上这课干嘛？？？" class="headerlink" title="那我上这课干嘛？？？"></a>那我上这课干嘛？？？</h2></li>
+<li><p>以文字叙述形式提交作业</p>
+<h2 id="你TM文科呢？写千字文呢？"><a href="#你TM文科呢？写千字文呢？" class="headerlink" title="你TM文科呢？写千字文呢？"></a>你TM文科呢？写千字文呢？</h2></li>
+<li><p>传统艺能——作业<strong>发布后</strong>一改再改<br><img src="/images/201107.png"></p>
+</li>
+<li><p>作业提交形式极其不合理</p>
+<h2 id="multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？"><a href="#multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？" class="headerlink" title="multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？"></a>multisim的仿真、代码你让我们用pdf交，又要看示波器波形，我们怎么办？截图？？</h2></li>
+<li><p>Tutorial视频不传内网传piazza</p>
+<h2 id="TM逗我玩？你TM在搞笑么-真就看得起上科的出口带宽咯？"><a href="#TM逗我玩？你TM在搞笑么-真就看得起上科的出口带宽咯？" class="headerlink" title="TM逗我玩？你TM在搞笑么?真就看得起上科的出口带宽咯？"></a>TM逗我玩？你TM在搞笑么?真就看得起上科的出口带宽咯？</h2><p><img src="/images/201107_2.png"></p>
+</li>
+</ol>
 
         </div>
     
@@ -388,7 +407,7 @@
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
                 <h2>About</h2>
                 <p>
-                    曾真正热爱过什么吗？
+                    进入此门者，应当舍弃一切希望。
                 </p>
             </div>
             
@@ -397,19 +416,19 @@
         <ul>
             
             <li>
-                <a class="footer-post" href="/2021/04/14/2021-04-14-%E5%AF%B9%E5%90%84%E7%A7%8D%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%9C%8B%E6%B3%95/">对各种小程序/客户端的一点看法</a>
+                <a class="footer-post" href="/2021/09/04/2021-09-04-210904%E8%80%81%E5%AE%B6%E7%9A%84%E4%B8%A7%E8%91%AC%E4%B9%A0%E4%BF%97/">210904老家的丧葬习俗</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2021/04/09/2021-04-09-REMEMBER11/">REMEMBER11</a>
+                <a class="footer-post" href="/2021/06/15/2021-06-15-210614%E5%A4%A7%E5%9B%BE%E4%B9%A6%E9%A6%86%E7%9A%84%E7%89%A7%E7%BE%8A%E4%BA%BA/">大图书馆的牧羊人</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2021/03/29/2021-03-29-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E7%BB%93%E5%90%88%E4%B8%8A%E4%B8%8B%E8%AF%AD%E5%A2%83%E5%B0%B1%E7%9C%8B%E4%B8%8D%E6%87%82%E7%9A%84%E5%86%85%E5%AE%B9/">有什么不结合上下语境就看不懂的内容?</a>
+                <a class="footer-post" href="/2021/05/31/2021-05-31-210531%E6%9D%82%E8%AE%B0/">New Post</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2021/03/24/2021-03-24-210324-Little-Endian/">210324 Little-Endian</a>
+                <a class="footer-post" href="/2021/05/20/2021-05-20-210520%E5%86%99%E7%82%B9%E6%97%A5%E8%AE%B0%E5%90%A7/">210520写点日记吧</a>
             </li>
             
         </ul>
